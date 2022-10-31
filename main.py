@@ -9,16 +9,14 @@ from plotly import graph_objs as go
 START = "2015-01-01"
 TODAY = date.today().strftime("%Y-%m-%d")
 
-st.title('Stock Forecasting')
-usrInput = 'TSLA'
+st.title('Stock Forecast App')
+usrInput = st.text_input("Input a Stock Symbol",max_chars=5)
 
-stocks = {'GOOG', 'AAPL', 'MSFT', 'GME', usrInput}
+stocks = ('GOOG', 'AAPL', 'MSFT', 'GME', 'TSLA', usrInput)
+selected_stock = usrInput
 selected_stock = st.selectbox('Select dataset for prediction', stocks)
 
-usrInput = st.text_input("Input a Stock Symbol", max_chars=5)
-stocks.add(usrInput)
-
-n_years = st.slider('Years of prediction:', 1, 5)
+n_years = st.slider('Years of prediction:', 1, 4)
 period = n_years * 365
 
 @st.cache
