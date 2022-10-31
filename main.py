@@ -12,10 +12,11 @@ TODAY = date.today().strftime("%Y-%m-%d")
 st.title('Stock Forecasting')
 usrInput = 'TSLA'
 
-stocks = ('GOOG', 'AAPL', 'MSFT', 'GME', usrInput)
+stocks = {'GOOG', 'AAPL', 'MSFT', 'GME', usrInput}
 selected_stock = st.selectbox('Select dataset for prediction', stocks)
 
 usrInput = st.text_input("Input a Stock Symbol", max_chars=5)
+stocks.add(usrInput)
 
 n_years = st.slider('Years of prediction:', 1, 5)
 period = n_years * 365
