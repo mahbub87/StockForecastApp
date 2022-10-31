@@ -10,6 +10,7 @@ START = "2015-01-01"
 TODAY = date.today().strftime("%Y-%m-%d")
 
 st.title('Stock Forecast App')
+usrInput = "TSLA"
 usrInput = st.text_input("Input a Stock Symbol",max_chars=5)
 
 stocks = (usrInput)
