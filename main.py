@@ -12,7 +12,7 @@ TODAY = date.today().strftime("%Y-%m-%d")
 st.title('Stock Forecast App')
 usrInput = st.text_input("Input a Stock Symbol",max_chars=5)
 
-stocks = ('GOOG', 'AAPL', 'MSFT', 'GME', 'TSLA', st.text_input("Input a Stock Symbol",max_chars=5))
+stocks = ('GOOG', 'AAPL', 'MSFT', 'GME', 'TSLA', usrInput)
 selected_stock = usrInput
 selected_stock = st.selectbox('Select dataset for prediction', stocks)
 
