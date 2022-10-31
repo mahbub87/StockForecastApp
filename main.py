@@ -13,7 +13,7 @@ st.title('Stock Forecast App')
 usrInput = st.text_input("Input a Stock Symbol",max_chars=5)
 
 stocks = ('GOOG', 'AAPL', 'MSFT', 'GME', 'TSLA', st.text_input("Input a Stock Symbol",max_chars=5))
-
+selected_stock = usrInput
 selected_stock = st.selectbox('Select dataset for prediction', stocks)
 
 n_years = st.slider('Years of prediction:', 1, 4)
@@ -57,4 +57,5 @@ st.write(forecast.tail())
 st.write(f'Stock Forecast')
 fig1 = plot_plotly(m, forecast)
 st.plotly_chart(fig1)
+
 
