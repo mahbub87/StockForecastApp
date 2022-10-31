@@ -16,7 +16,6 @@ stocks = ('GOOG', 'AAPL', 'MSFT', 'GME', usrInput)
 selected_stock = st.selectbox('Select dataset for prediction', stocks)
 
 usrInput = st.text_input("Input a Stock Symbol", max_chars=5)
-selected_stock = usrInput
 
 n_years = st.slider('Years of prediction:', 1, 5)
 period = n_years * 365
